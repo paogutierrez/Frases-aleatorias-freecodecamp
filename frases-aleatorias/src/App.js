@@ -11,7 +11,7 @@ let quoteDBUrl = "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c958
 function App() {
   const [quote, setQuote] = useState("There are no traffic jams along the extra mile.");
   const [author, setAuthor] = useState("Roger Staubach");
-  const [randomNumber, setRandomNumber] = useState(0);
+  const [, setRandomNumber] = useState(0);
   const [quotesArray, setQuotesArray] = useState(null);
   const [accentColor, setAccentColor] = useState('#282c34')
 
@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     fetchQuotes(quoteDBUrl)
-  }, [quoteDBUrl])
+  }, )
 
   const getRandomQuote = () => {
     let randomInteger = Math.floor(quotesArray.length * Math.random())
@@ -39,7 +39,7 @@ function App() {
     <div className="App">
       <header className="App-header" style={{backgroundColor:accentColor}}>
         <div id="quote-box" style={{color:accentColor}}>
-      <h1></h1>
+      
         <p id ="text">
         "{quote}"
         </p>
